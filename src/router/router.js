@@ -1,12 +1,14 @@
-import express from express;
+import express from 'express';
 import sendJSON from '../middleware/sendJSON';
 
-const router = express.router();
+const router = express.Router();
 
 router.get('/', (req, res, next) => {
   res.send('Server Home');
 });
 
 router.get('/content', (req, res, next) => {
-  sendJSON()
-})
+  sendJSON(res, req.body);
+});
+
+export default router;
