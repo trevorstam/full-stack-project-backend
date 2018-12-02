@@ -1,5 +1,5 @@
 import express from 'express';
-import sendJSON from '../middleware/sendJSON';
+import content from '../content/content';
 
 const router = express.Router();
 
@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/content', (req, res, next) => {
-  sendJSON(res, req.body);
+  res.send(content);
 });
 
 export default router;
