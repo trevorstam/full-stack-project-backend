@@ -19,7 +19,7 @@ app.use(router);
 app.use(notFound);
 app.use(errorHandler);
 
-app.use(express.static('public'));
+app.use(express.static('../public'));
 
 let server;
 
